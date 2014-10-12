@@ -2,6 +2,8 @@
 
 My OS X dotfiles.
 
+![Screenshot of bash prompt](http://i.imgur.com/R1ARoLC.png)
+
 ## How to install
 
 First, install Homebrew for OS X (http://brew.sh) This will force the installation of the [XCode Command Line Tools](https://developer.apple.com/downloads) and may overwrite existing dotfiles in your HOME and `.vim` directories.
