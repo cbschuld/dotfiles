@@ -34,6 +34,9 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
+# Screen: enable subpixel font rendering on non-Apple LCDs
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
 ###############################################################
 # Terminal
 ###############################################################
@@ -72,6 +75,13 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Disks: avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+
+###############################################################
+# Disks / SSD / Magnetic
+###############################################################
+
+rsync --exclude ".DS_Store" -av --no-perms ${HOME}/.dotfiles/fonts/ ~/Library/Fonts/
 
 ###############################################################
 # Kick in the Pants
